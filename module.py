@@ -5,7 +5,7 @@ import pandas as pd
 symbol = input("Enter asset ticker: ")
 data_points = input("Enter # of hours: ")
 attributes = ["galaxy_score", "volatility", "close", "tweets"]
-interval = "hour"
+interval = "hour" #input("hour/day: ")
 print("Pulling Data...")
 link = "https://api.lunarcrush.com/v2?data=assets&key=dj4tgdk9258k4d9yl0ebm&symbol=" + symbol + "&data_points=" + data_points + "&interval=" + interval
 response = requests.get(url=link)
