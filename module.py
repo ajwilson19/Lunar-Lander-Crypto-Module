@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 symbol = "XRP" #input("Enter asset ticker: ")
-data_points = "1" #input("Enter # of hours: ")
+data_points = "2" #input("Enter # of hours: ")
 attributes = ["galaxy_score", "volatility", "close", "tweets"]
 interval = "hour"
 
@@ -13,6 +13,9 @@ json_object = json.loads(response.text)
 
 data = json_object['data']
 data_dict = data[0]
-for elem in data_dict:
-    if elem in attributes:
-        print(elem, data_dict[elem])
+for hour in data_dict['timeSeries']:
+    #print(hour)
+    for elem in hour:
+        if elem in attributes:
+            print(elem, hour[elem])
+    print()
