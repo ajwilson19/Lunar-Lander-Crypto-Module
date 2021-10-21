@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 symbol = "XRP" #input("Enter asset ticker: ")
-data_points = "2" #input("Enter # of hours: ")
+data_points = input("Enter # of hours: ")
 attributes = ["galaxy_score", "volatility", "close", "tweets"]
 interval = "hour"
 
